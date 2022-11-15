@@ -37,15 +37,15 @@ ser_dono_da_lua(){
 ## EBNF da Lingaguagem
 
 ```javaScript
-PROGRAM = "plano_infalivel", "(" , ")", "{" , (λ | STATEMENT), "}";
+PROGRAM = "plano_infalivel", "(" , ")", BLOCK;
+
+BLOCK = ("{", STATEMENT, "}" | "{" , "}");
 
 STATEMENT =  (((λ | ASSIGNMENT | PRINT  | VAR | RETURN), ";") | (BLOCK | IF | WHILE));
 
-BLOCK = "{", STATEMENT, "}";
+RELEXPRESSION = EXPRESSION , {("<" | ">" | "==" | ".") , EXPRESSION };
 
-RELEXPRESSION = EXPRESSION , {("<" | ">" | "=="") , EXPRESSION };
-
-EXPRESSION = TERM, { ("+" | "-" | "ou"), TERM } ;
+EXPRESSION = TERM, { ("+" | "-" | "ou"), TERM };
 
 TERM = FACTOR, { ("e"), FACTOR };
 
@@ -55,17 +55,21 @@ FACTOR = INT | STRING | IDENTIFIER | (("+" | "-" | "!"), FACTOR) | ("(", RELEXPR
 ```javaScript
 IDENTIFIER = LETTER, { LETTER | DIGIT | "_" };
 
-PRINT = "mostle", "(", RELEXPRESSION, ")";
+VAR_TYPE = ("inteilo" | "palavla")
 
-VAR = "valiavel", IDENTIFIER, {",", IDENTIFIER}, ":", TYPE;
+DECLARATION = (IDENTIFIER, ",", VAR_TYPE | IDENTIFIER, ",", DECLARATION)
 
-TYPE = ("inteilo" | "palavla")
-
-WHILE = "enquarto", "(", RELEXPRESSION ,")", STATEMENT;
-
-IF = "semple_que", "(", RELEXPRESSION ,")", STATEMENT, (("caso_contlalio", STATEMENT) | λ );
+VAR = "valiavel", DECLARATION;
 
 ASSIGNMENT = IDENTIFIER, "=", RELEXPRESSION;
+
+PRINT = "mostle", "(", RELEXPRESSION, ")";
+
+IF = "semple_que", "(", RELEXPRESSION ,")", STATEMENT, ELSE
+
+ELSE = ("caso_contlalio", STATEMENT | λ)
+
+WHILE = "dulante", "(", RELEXPRESSION ,")", STATEMENT;
 
 RETURN = "retolne" , RELEXPRESSION;
 
@@ -103,6 +107,26 @@ plano_infalivel(){
         a = a + 1;
     }
 }
+```
+
+## Comandos
+
+Gerar o y.tab.h e o y.tab.c
+
+```cmd
+yacc -d parser.y
+```
+
+Importar o y.tab.h em `tokens.l` e depois rodar:
+
+```cmd
+lex tokens.l
+```
+
+Gerando o lex.yy.c. Para gerar o executável do compilador:
+
+```cmd
+gcc lex.yy.c y.tab.c -o exec
 ```
 
 ## Referências
