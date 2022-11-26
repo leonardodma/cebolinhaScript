@@ -1,15 +1,16 @@
-lotina plano_infalivel(){
-    valiavel a: palavla;
-    valiavel b: palavla;
+lotina plano_infalivel()
+{
+    valiavel a : palavla;
+    valiavel b : palavla;
     a = "a";
     b = "b";
 
-    if (a == b) {
+    if (a == b)
+    {
         mostle("a == b");
-    } else {
+    }
+    else
+    {
         mostle("a != b");
     }
-
-
-
 }
