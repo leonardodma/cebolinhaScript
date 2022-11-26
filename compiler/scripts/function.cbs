@@ -1,0 +1,42 @@
+lotina multiplica(a, vezes: inteilo) -> inteilo
+{
+    valiavel i: inteilo;
+    valiavel lesultado: inteilo;
+    i = 0;
+    lesultado = 0;
+
+    dulante (i < vezes)
+    {
+        lesultado = lesultado + a;
+        i = i + 1;
+    }
+
+    letolne lesultado;
+}
+
+lotina divide(a: inteilo, b: inteilo) -> inteilo
+{
+    valiavel i: inteilo;
+    valiavel lesultado: inteilo;
+    i = 0;
+    lesultado = 0;
+
+    dulante (i < a)
+    {
+        i = i + b;
+        lesultado = lesultado + 1;
+    }
+
+    letolne lesultado;
+}
+
+lotina plano_infalivel()
+{
+    valiavel a: inteilo;
+    valiavel b: inteilo;
+    valiavel c: inteilo;
+    a = 10;
+    b = 5;
+    mostle(multiplica(a, b));
+    mostle(divide(a, b));
+}

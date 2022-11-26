@@ -1,0 +1,4 @@
+lotina plano_infalivel(){
+    mostle(1);
+    mostle("Loubar Sansão");
+}

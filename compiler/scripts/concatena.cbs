@@ -1,0 +1,13 @@
+lotina concatena(x, y: palavla) -> palavla {
+    letolne x . y;
+}
+
+lotina plano_infalivel(){
+    valiavel x: palavla;
+    valiavel y: palavla;
+    valiavel palavla_concatenada: palavla;
+    x = "abcdefg";
+    y = "hijklmn";
+    palavla_concatenada = concatena(x, y);
+    mostle(palavla_concatenada);
+}

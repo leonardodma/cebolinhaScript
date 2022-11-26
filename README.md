@@ -1,4 +1,4 @@
-# cebolinhaScript
+# Cebolinha Sclipt
 
 Linguagem de programação Baseada no Personagem de Gibs Brasileiro `Cebolinha`
 
@@ -13,31 +13,14 @@ Linguagem de programação Baseada no Personagem de Gibs Brasileiro `Cebolinha`
 ## Características da Linguagem
 
 - Não é possível digitar `r` nessa linguagem. Se for digitado, o compilador retornará erro automaticamente.
-- Pelo fato de possuir apenas 7 anos de idade, cebolinha só sabe somar, subtrair e contar até no máximo `1000`. Assim, a linguagem terá apenas os operadores `+` e `-`, e contará até no máximo `1000`, e o compilador retornará erro se alguma operação ou valor atribuído, passar desse número.
-- Para funções que retonem inteiro, a sintaxe será:
-
-```javaScript
-loubar_sansao(){
-    valiavel a inteilo;
-    a = 1;
-    retolne a;
-}
-```
-
-- Para funções que retornem uma string, a sintaxe será:
-
-```javaScript
-ser_dono_da_lua(){
-    valiavel a palavla;
-    a = "Dono da Lua";
-    retolne a;
-}
-```
+- Pelo fato de possuir apenas 7 anos de idade, cebolinha só sabe somar, subtrair e contar até no máximo `1000`. Assim, a linguagem terá apenas os operadores de contagem `+` e `-`, e contará até no máximo `1000`, e o compilador retornará erro se alguma operação ou valor atribuído, passar desse número.
 
 ## EBNF da Lingaguagem
 
 ```javaScript
-PROGRAM = "plano_infalivel", "(" , ")", BLOCK;
+PROGRAM = DECLARATION
+
+DECLARATION =  "lotina", IDENTIFIER,  "plano_infalivel", "(" , ({IDENTIFIER, (":", VAR_TYPE, (",", λ) | ",") | }, λ), ")", (λ | "->", VAR_TYPE), BLOCK;
 
 BLOCK = ("{", STATEMENT, "}" | "{" , "}");
 
@@ -49,7 +32,7 @@ EXPRESSION = TERM, { ("+" | "-" | "ou"), TERM };
 
 TERM = FACTOR, { ("e"), FACTOR };
 
-FACTOR = INT | STRING | IDENTIFIER | (("+" | "-" | "!"), FACTOR) | ("(", RELEXPRESSION, ")") | READ;
+FACTOR = INT | STRING | (IDENTIFIER, (λ | "(" , (λ | {REALEXPRESSION, ("," | λ)}) , ")")) | (("+" | "-" | "!"), FACTOR) | ("(", RELEXPRESSION, ")") | READ;
 ```
 
 ```javaScript
@@ -71,7 +54,7 @@ ELSE = ("caso_contlalio", STATEMENT | λ)
 
 WHILE = "dulante", "(", RELEXPRESSION ,")", STATEMENT;
 
-RETURN = "retolne" , RELEXPRESSION;
+RETURN = "letolne" , RELEXPRESSION;
 
 READ = "insila", "(", ")";
 
@@ -109,7 +92,7 @@ plano_infalivel(){
 }
 ```
 
-## Comandos
+## Comandos Flex Bison
 
 Gerar o y.tab.h e o y.tab.c
 

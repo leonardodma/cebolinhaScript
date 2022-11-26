@@ -1,0 +1,20 @@
+lotina plano_infalivel(){
+    valiavel a: inteilo;
+    valiavel b: palavla;
+    valiavel c: palavla;
+    a = 0;
+    b = "Numelo > que 10";
+    c = "Numelo < que 10";
+
+    dulante (a < 20){
+
+        semple_que (a < 10){
+            mostle (b);
+        }
+        caso_contlalio {
+            mostle (c);
+        }
+
+        a = a + 1;
+    }
+}
