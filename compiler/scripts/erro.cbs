@@ -1,0 +1,5 @@
+lotina plano_infalivel(){
+    var r: inteilo;
+    r = 3;
+    mostle(r);
+}

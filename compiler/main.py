@@ -3,8 +3,8 @@ from parser import *
 
 
 def main(argv, arc):
-    # filename = argv[1]
-    filename = "compiler/scripts/function.cbs"
+    filename = argv[1]
+    # filename = "compiler/scripts/function.cbs"
     with open(filename, "r") as file:
         source = file.read()
         Parser.run(source)

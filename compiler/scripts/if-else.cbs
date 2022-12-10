@@ -5,11 +5,11 @@ lotina plano_infalivel()
     a = "a";
     b = "b";
 
-    if (a == b)
+    semple_que (a == b)
     {
         mostle("a == b");
     }
-    else
+    caso_contlalio
     {
         mostle("a != b");
     }

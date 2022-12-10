@@ -1,0 +1,7 @@
+lotina plano_infalivel(){
+    valiavel x: inteilo;
+    valiavel y: inteilo;
+    x = 1000;
+    y = 1000;
+    mostle(x + y);
+}
