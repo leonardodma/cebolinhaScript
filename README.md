@@ -20,7 +20,7 @@ Linguagem de programação Baseada no Personagem de Gibs Brasileiro `Cebolinha`
 ```javaScript
 PROGRAM = DECLARATION
 
-DECLARATION =  "lotina", IDENTIFIER,  "plano_infalivel", "(" , ({IDENTIFIER, (":", VAR_TYPE, (",", λ) | ",") | }, λ), ")", (λ | "->", VAR_TYPE), BLOCK;
+DECLARATION =  "lotina", IDENTIFIER, "(" , ({IDENTIFIER, (":", VAR_TYPE, (","| λ) | ",")}, λ), ")", (λ | "->", VAR_TYPE), BLOCK;
 
 BLOCK = ("{", STATEMENT, "}" | "{" , "}");
 
@@ -60,7 +60,7 @@ READ = "insila", "(", ")";
 
 INT = DIGIT, { DIGIT };
 
-STRING = ("" | ", *, ");
+STRING = ("" | ", * && !(r | R), ");
 
 DIGIT = (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9);
 
