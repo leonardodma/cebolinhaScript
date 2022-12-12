@@ -4,9 +4,9 @@ Linguagem de programação Baseada no Personagem de Gibs Brasileiro `Cebolinha`
 
 ![cebolinha](img/cebolinha.png)
 
-## Caracterísitcas do Cebolinha
+## Características do Cebolinha
 
-- Possui um prblema conhecido como dislalia, e por isso, sempre troca a letra `r` pelo `l` em suas falas
+- Possui um problema conhecido como dislalia, e por isso, sempre troca a letra `r` pelo `l` em suas falas
 - Seu maior objetivo é derrotar a personagem `Mônica` para se tornar o "dono da rua". Para isso, ele tenta colocar em prática seus `planos infalíveis`, que nunca dão certo, mas sempre possuem o objetivo de pegar o bixo de pelúcia da `Mônica`, `Sansão`.
 - Tem 7 anos de idade
 
